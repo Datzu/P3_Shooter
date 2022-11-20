@@ -62,15 +62,17 @@ void APlayerChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 }
 
 void APlayerChar::MoveForward(float vel) {
-	if (vel != 0)
+	if (vel != 0) {
 		AddMovementInput(GetActorForwardVector(), vel * moveSpeed);
-		//UE_LOG(LogTemp, Warning, TEXT("Forward:"));
+		UE_LOG(LogTemp, Warning, TEXT("Forward:"));
+	}
 }
 
 void APlayerChar::MoveRight(float vel) {
-	if (vel != 0)
+	if (vel != 0) {
 		AddMovementInput(GetActorRightVector(), vel * moveSpeed);
-		//UE_LOG(LogTemp, Warning, TEXT("Right:"));
+		UE_LOG(LogTemp, Warning, TEXT("Right:"));
+	}
 }
 
 void APlayerChar::OnUseItem() {
